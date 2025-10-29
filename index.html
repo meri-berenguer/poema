@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poema</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body{
+            background: radial-gradient(circle at center, #0c0f12 0%, #000 100%);
+            color: #e8e8e8;
+            font-family: Georgia, serif;
+            min-height: 100vh;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5vh;
+        }
+        #primero, #segundo, #tercero{
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        p{
+            position: relative;
+            font-size: clamp(2rem, 4vw, 4rem);
+            margin: 0.4em 0;
+            letter-spacing: 0.1em;
+            transition: all o.8 ease;
+        }
+
+        .quiet{
+            color: #7aa6c2;
+            text-transform: lowercase;
+            cursor: pointer;
+        }
+
+        .quiet::after{
+            content: "teiuq";
+            position: absolute;
+            top:0%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            color: #b2d1e3;
+        }
+
+        .quiet:hover {
+            color: transparent;
+        }
+
+        .quiet:hover::after {
+            opacity: 1;
+        }
+
+        .silence{
+            color: #d4d4c7;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            cursor: pointer;
+           
+        }
+
+        .silence::after {
+            content: "ecnelis";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            color: #b1b1a8;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: width 2s ease, opacity 1.5s ease;
+        }
+
+        .silence:hover {
+            color: transparent;
+        }
+
+        .silence:hover::after {
+            width: 100%;
+            opacity: 1;
+        }
+
+         #segundo:hover p,
+    #segundo:hover .silence::after {
+      opacity: 0.8;
+    }
+
+        
+    </style>
+</head>
+<body>
+    <div id="primero">
+        <p class="quiet">quiet</p>
+        <p class="quiet">quiet</p>
+        <p class="quiet">quiet</p>
+    </div>
+
+    <div id="segundo">
+        <p class="silence">SILENCE</p>
+        <p class="silence">SILENCE</p>
+        <p class="silence">SILENCE</p>
+    </div>
+
+    <div id="tercero">
+        <p class="quiet">quiet</p>
+        <p class="quiet">quiet</p>
+        <p class="quiet">quiet</p>
+    </div>
+    <!--<div id="primero">
+        <p>quiet</p>
+        <p>teiuq</p>
+        <p>quiet</p>
+        <p>teiuq</p>
+        <p>teiuq</p>
+        <p>quiet</p>
+        <p>teiuq</p>
+        <p>quiet</p>
+    </div>
+    <div id="segundo">
+        <p>silence</p>
+        <p>ecnelis</p>
+        <p>silence</p>
+        <p>ecnelis</p>
+        <p>ecnelis</p>
+        <p>silence</p>
+        <p>ecnelis</p>
+        <p>silence</p>
+    </div>
+    <div id="tercero">
+        <p>quiet</p>
+        <p>teiuq</p>
+        <p>quiet</p>
+        <p>teiuq</p>
+        <p>teiuq</p>
+        <p>quiet</p>
+        <p>teiuq</p>
+        <p>quiet</p>
+    </div>-->
+</body>
+</html>
